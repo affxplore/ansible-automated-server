@@ -1,0 +1,103 @@
+---
+# ==========================================
+# TASK UMUM: Update Semua Server
+# ==========================================
+- name: Update and Upgrade All Servers
+  hosts: all
+  become: true
+  tasks:
+    - name: Update apt cache and upgrade packages
+      apt:
+        update_cache: yes
+        upgrade: dist
+        cache_valid_time: 3600
+
+# ==========================================
+# SERVER 1: Web Server (Nginx) & Firewall
+# ==========================================
+- name: Configure Web Server (Server 1)
+  hosts: web_servers
+  become: true
+  tasks:
+    - name: Install Nginx
+      apt:
+        name: nginx
+        state: latest
+
+    - name: Ensure Nginx is running and enabled
+      systemd:
+        name: nginx
+        state: started
+        enabled: yes
+
+    - name: Copy custom server1.html to server
+      copy:
+        src: server1.html
+        dest: /var/www/html/index.html
+        owner: www-data
+        group: www-data
+        mode: '0644'
+
+    - name: Configure UFW Firewall for Web Server
+      ufw:
+        rule: allow
+        port: "{{ item }}"
+        proto: tcp
+      loop:
+        - '22'    # SSH
+        - '80'    # HTTP
+        - '443'   # HTTPS
+
+    - name: Enable UFW
+      ufw:
+        state: enabled
+
+# ==========================================
+# SERVER 2: Database Server (MySQL) & Firewall
+# ==========================================
+- name: Configure Database Server (Server 2)
+  hosts: db_servers
+  become: true
+  tasks:
+    - name: Install MySQL Server
+      apt:
+        name: mysql-server
+        state: latest
+
+    - name: Ensure MySQL is running and enabled
+      systemd:
+        name: mysql
+        state: started
+        enabled: yes
+
+    - name: Configure MySQL to listen on all interfaces
+      lineinfile:
+        path: /etc/mysql/mysql.conf.d/mysqld.cnf
+        regexp: '^bind-address'
+        line: 'bind-address = 0.0.0.0'
+      notify: Restart MySQL
+
+    - name: Configure UFW Firewall for DB Server
+      ufw:
+        rule: allow
+        port: "{{ item }}"
+        proto: tcp
+      loop:
+        - '22'    # SSH
+
+    - name: Allow MySQL traffic specifically from Server 1 IP
+      ufw:
+        rule: allow
+        from_ip: 192.168.253.130
+        port: '3306'
+        proto: tcp
+
+    - name: Enable UFW
+      ufw:
+        state: enabled
+
+  handlers:
+    - name: Restart MySQL
+      systemd:
+        name: mysql
+        state: restarted
