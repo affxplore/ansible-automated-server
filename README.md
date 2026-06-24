@@ -37,10 +37,10 @@ A multi-tier architecture is implemented by separating the Web Server and Databa
 
 +-------------------+             +-------------------+
 |    Web Server     |             |  Database Server  |
-| Ubuntu 22.04 LTS |             | Ubuntu 22.04 LTS |
-| Nginx            |             | MySQL            |
-| UFW Firewall     |             | UFW Firewall     |
-| 192.168.253.130  |             | 192.168.253.xxx  |
+| Ubuntu 22.04 LTS  |             |  Ubuntu 22.04 LTS |
+| Nginx             |             |  MySQL            |
+| UFW Firewall      |             |  UFW Firewall     |
+| 192.168.253.130   |             |  192.168.253.xxx  |
 +-------------------+             +-------------------+
 
               HTTP/HTTPS
@@ -57,7 +57,7 @@ A multi-tier architecture is implemented by separating the Web Server and Databa
 | Category         | Technology              |
 | ---------------- | ----------------------- |
 | Automation       | Ansible                 |
-| Virtualization   | VirtualBox              |
+| Virtualization   | VMware                  |
 | Operating System | Ubuntu Server 22.04 LTS |
 | Web Server       | Nginx                   |
 | Database         | MySQL                   |
