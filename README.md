@@ -3,6 +3,7 @@
 ![Nginx](https://img.shields.io/badge/Web%20Server-Nginx-green)
 ![MySQL](https://img.shields.io/badge/Database-MySQL-blue)
 ![UFW](https://img.shields.io/badge/Firewall-UFW-orange)
+![IaC](https://img.shields.io/badge/Infrastructure%20as%20Code-IaC-purple)
 
 ---
 
@@ -19,7 +20,9 @@ A multi-tier architecture is implemented by separating the Web Server and Databa
 ---
 
 ## 🖥️ Lab Environment
-<img src="screenshots/lab-environment.png" width="900">
+<p align="center">
+  <img src="screenshots/lab-environment.png" width="900">
+</p>
 
 ---
 
@@ -119,7 +122,6 @@ A multi-tier architecture is implemented by separating the Web Server and Databa
 | README.md        | Project documentation                                              |
 
 ```
-```
 
 ## ⚙️ Automated Tasks
 
@@ -201,7 +203,6 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/affxplore/ansible-automated-server.git
-
 cd ansible-automated-server
 ```
 
@@ -300,7 +301,7 @@ Expected:
 From Web Server:
 
 ```bash
-nc -zv <database-server-ip> 3306
+nc -zv 192.168.253.131 3306
 ```
 
 Expected:
@@ -312,7 +313,7 @@ Connection succeeded
 From Host Machine:
 
 ```bash
-nc -zv <database-server-ip> 3306
+nc -zv 192.168.253.131 3306
 ```
 
 Expected:
@@ -415,5 +416,3 @@ Potential future enhancements include:
 * Implement centralized logging with ELK Stack or Loki.
 * Configure automated alerting.
 
-```
-```
