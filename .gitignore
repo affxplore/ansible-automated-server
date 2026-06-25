@@ -1,0 +1,18 @@
+# SSH
+.ssh/
+
+# Cache
+.cache/
+
+# History
+.bash_history
+.lesshst
+
+# User configs
+.bashrc
+.bash_logout
+.profile
+.gitconfig
+
+# Ansible
+*.retry
