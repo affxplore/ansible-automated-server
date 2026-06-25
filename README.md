@@ -4,6 +4,8 @@
 ![MySQL](https://img.shields.io/badge/Database-MySQL-blue)
 ![UFW](https://img.shields.io/badge/Firewall-UFW-orange)
 
+---
+
 # Automated Server Provisioning & Security Hardening with Ansible
 
 ## 📖 Project Overview
@@ -16,12 +18,17 @@ A multi-tier architecture is implemented by separating the Web Server and Databa
 
 ---
 
+## 🖥️ Lab Environment
+<img width="1183" height="548" alt="image" src="https://github.com/user-attachments/assets/fa1f44a0-dc7d-4f0f-b67c-1e0bd46dba6e" />
+
+---
+
 ## ⭐ Project Highlights
 
-- Automated provisioning of multiple Ubuntu servers using Ansible.
-- Deployed Nginx and MySQL services with a single playbook execution.
-- Implemented firewall-based database isolation using UFW.
-- Applied Infrastructure as Code (IaC) principles.
+- Provisioned 2 Ubuntu servers from a centralized Ansible Control Node.
+- Automated Nginx and MySQL deployment using a single playbook.
+- Implemented firewall-based database isolation with UFW.
+- Applied Infrastructure as Code (IaC) principles for repeatable deployments.
 - Built and tested entirely in a VMware Workstation lab environment.
 
 ---
@@ -56,7 +63,7 @@ A multi-tier architecture is implemented by separating the Web Server and Databa
      │ Ubuntu 26.04 LTS │                    │ Ubuntu 26.04 LTS │
      │ Nginx            │                    │ MySQL            │
      │ UFW Firewall     │                    │ UFW Firewall     │
-     │ 192.168.253.130  │                    │ 192.168.253.xxx  │
+     │ 192.168.253.130  │                    │ 192.168.253.131  │
      └────────┬─────────┘                    └────────┬─────────┘
               │                                       ▲
               │ MySQL (3306)                          │
@@ -76,8 +83,8 @@ A multi-tier architecture is implemented by separating the Web Server and Databa
 | Category         | Technology              |
 | ---------------- | ----------------------- |
 | Automation       | Ansible                 |
-| Virtualization   | VMware                  |
-| Operating System | Ubuntu Server 22.04 LTS |
+| Virtualization   | VMware Workstation      |
+| Operating System | Ubuntu Server 26.04 LTS |
 | Web Server       | Nginx                   |
 | Database         | MySQL                   |
 | Firewall         | UFW                     |
@@ -144,6 +151,11 @@ The playbook automatically:
 ---
 
 ## 🔒 Security Hardening
+
+### Network Isolation
+
+The database server is not directly accessible from external hosts.
+Only the web server is permitted to establish MySQL connections through port 3306.
 
 ### Firewall Segmentation
 
@@ -307,56 +319,26 @@ This confirms that the database is protected from unauthorized external access.
 
 ## 📸 Screenshots
 
-Include screenshots for:
-
-1. Successful Ansible Playbook execution.
-<img width="478" height="125" alt="Screenshot_212" src="https://github.com/user-attachments/assets/b7249ff2-7ef4-4602-a9af-c55a6cafd155" />
-
-2. Custom Nginx landing page.
-<img width="944" height="522" alt="image" src="https://github.com/user-attachments/assets/c02a2b63-a649-4786-87c7-b657ddb72893" />
-
-3. Nginx service status.
-<img width="989" height="372" alt="image" src="https://github.com/user-attachments/assets/4e8022af-e54d-4bf8-9171-0183d19d7e18" />
-
-4. MySQL service status.
-<img width="836" height="339" alt="image" src="https://github.com/user-attachments/assets/62f30e37-5a59-404d-9cdd-dfdf76f62cff" />
-
-5. UFW status on Web Server.
-<img width="510" height="234" alt="image" src="https://github.com/user-attachments/assets/6825c2cf-68df-4ebf-98a8-46e0c4e7177f" />
-
-6. UFW status on Database Server.
-<img width="510" height="234" alt="image" src="https://github.com/user-attachments/assets/81b898ed-e770-460a-8dcb-726a651c10a7" />
-
-7. Successful MySQL connectivity test from Web Server.
-<img width="568" height="122" alt="image" src="https://github.com/user-attachments/assets/f3766f23-78dc-46d1-a8c6-16e21426de1b" />
-
-8. Blocked MySQL connectivity test from Host Machine.
-<img width="568" height="122" alt="image" src="https://github.com/user-attachments/assets/90a9c601-cc30-4398-9210-5bea2fffec18" />
-
-
-## 📸 Screenshots
-
-| Description                  | Screenshot                   |
-| ---------------------------- | ---------------------------- |
-| Ansible Playbook Execution   | <img width="478" height="125" alt="Screenshot_212" src="https://github.com/user-attachments/assets/b7249ff2-7ef4-4602-a9af-c55a6cafd155" /> |
-| Custom Nginx Landing Page    | <img width="944" height="522" alt="image" src="https://github.com/user-attachments/assets/c02a2b63-a649-4786-87c7-b657ddb72893" /> |
-| Nginx Service Status         | <img src="URL3" width="700"> |
-| MySQL Service Status         | <img src="URL4" width="700"> |
-| UFW Status (Web Server)      | <img src="URL5" width="700"> |
-| UFW Status (Database Server) | <img src="URL6" width="700"> |
-| MySQL Allowed Connection     | <img src="URL7" width="700"> |
-| MySQL Blocked Connection     | <img src="URL8" width="700"> |
+| Description                                        | Evidence                                                                                                |
+| -------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| Successful Ansible Playbook Execution              | <img src="https://github.com/user-attachments/assets/b7249ff2-7ef4-4602-a9af-c55a6cafd155" width="700"> |
+| Custom Nginx Landing Page                          | <img src="https://github.com/user-attachments/assets/c02a2b63-a649-4786-87c7-b657ddb72893" width="700"> |
+| Nginx Service Status                               | <img src="https://github.com/user-attachments/assets/4e8022af-e54d-4bf8-9171-0183d19d7e18" width="700"> |
+| MySQL Service Status                               | <img src="https://github.com/user-attachments/assets/62f30e37-5a59-404d-9cdd-dfdf76f62cff" width="700"> |
+| UFW Status on Web Server                           | <img src="https://github.com/user-attachments/assets/6825c2cf-68df-4ebf-98a8-46e0c4e7177f" width="700"> |
+| UFW Status on Database Server                      | <img src="https://github.com/user-attachments/assets/81b898ed-e770-460a-8dcb-726a651c10a7" width="700"> |
+| Successful MySQL Connectivity Test from Web Server | <img src="https://github.com/user-attachments/assets/f3766f23-78dc-46d1-a8c6-16e21426de1b" width="700"> |
+| Blocked MySQL Connectivity Test from Host Machine  | <img src="https://github.com/user-attachments/assets/90a9c601-cc30-4398-9210-5bea2fffec18" width="700"> |
 
 ---
 
 ## 🎯 Key Achievements
 
-* Provisioned and configured 2 Ubuntu servers from a single Ansible Control Node.
-* Automated installation and configuration of Nginx and MySQL.
-* Eliminated repetitive manual server setup processes.
-* Implemented firewall-based database isolation.
-* Applied least-privilege access control for backend services.
-* Successfully deployed a secure multi-tier infrastructure in a local virtualized environment.
+- Provisioned and configured 2 managed Ubuntu servers from a dedicated Ansible Control Node.
+- Automated deployment of Nginx and MySQL using Ansible Playbooks.
+- Reduced manual server configuration tasks through Infrastructure as Code practices.
+- Implemented database isolation by restricting MySQL access to trusted hosts only.
+- Successfully deployed a secure multi-tier architecture in a VMware Workstation lab environment.
 
 ---
 
