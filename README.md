@@ -1,5 +1,5 @@
 ![Ansible](https://img.shields.io/badge/Automation-Ansible-red)
-![Ubuntu](https://img.shields.io/badge/OS-Ubuntu%2022.04-E95420)
+![Ubuntu](https://img.shields.io/badge/OS-Ubuntu%2026.04-E95420)
 ![Nginx](https://img.shields.io/badge/Web%20Server-Nginx-green)
 ![MySQL](https://img.shields.io/badge/Database-MySQL-blue)
 ![UFW](https://img.shields.io/badge/Firewall-UFW-orange)
@@ -53,7 +53,7 @@ A multi-tier architecture is implemented by separating the Web Server and Databa
 
      ┌──────────────────┐                    ┌──────────────────┐
      │    Web Server    │                    │ Database Server  │
-     │ Ubuntu 22.04 LTS │                    │ Ubuntu 22.04 LTS │
+     │ Ubuntu 26.04 LTS │                    │ Ubuntu 26.04 LTS │
      │ Nginx            │                    │ MySQL            │
      │ UFW Firewall     │                    │ UFW Firewall     │
      │ 192.168.253.130  │                    │ 192.168.253.xxx  │
