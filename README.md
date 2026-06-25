@@ -353,8 +353,6 @@ This confirms that the database is protected from unauthorized external access.
 
 ## 💼 Skills Demonstrated
 
-...
-
 * Infrastructure as Code (IaC)
 * Configuration Management
 * Linux System Administration
@@ -379,8 +377,6 @@ Through this project, I learned how to:
 * Apply Infrastructure as Code principles to improve consistency and repeatability.
 * Implement network-level security controls using firewall rules.
 * Design a simple but secure multi-tier architecture.
-
-...
 
 ---
 
