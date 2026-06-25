@@ -1,12 +1,28 @@
+![Ansible](https://img.shields.io/badge/Automation-Ansible-red)
+![Ubuntu](https://img.shields.io/badge/OS-Ubuntu%2022.04-E95420)
+![Nginx](https://img.shields.io/badge/Web%20Server-Nginx-green)
+![MySQL](https://img.shields.io/badge/Database-MySQL-blue)
+![UFW](https://img.shields.io/badge/Firewall-UFW-orange)
+
 # Automated Server Provisioning & Security Hardening with Ansible
 
 ## 📖 Project Overview
 
 This project demonstrates Infrastructure as Code (IaC) principles by automating the provisioning and configuration of multiple Linux servers using Ansible.
 
-The environment consists of one Ansible Control Node and two managed servers running on VMware. The playbook automates operating system updates, software installation, service configuration, web deployment, and firewall hardening.
+The environment consists of one Ansible Control Node and two managed servers running on VMware Workstation. The playbook automates operating system updates, software installation, service configuration, web deployment, and firewall hardening.
 
 A multi-tier architecture is implemented by separating the Web Server and Database Server while restricting database access using firewall policies.
+
+---
+
+## ⭐ Project Highlights
+
+- Automated provisioning of multiple Ubuntu servers using Ansible.
+- Deployed Nginx and MySQL services with a single playbook execution.
+- Implemented firewall-based database isolation using UFW.
+- Applied Infrastructure as Code (IaC) principles.
+- Built and tested entirely in a VMware Workstation lab environment.
 
 ---
 
@@ -24,30 +40,33 @@ A multi-tier architecture is implemented by separating the Web Server and Databa
 ## 🏗️ Infrastructure Architecture
 
 ```text
-                +----------------------+
-                |   Control Node       |
-                |      (Ansible)       |
-                +----------+-----------+
-                           |
-                     SSH (Port 22)
-                           |
-        +------------------+------------------+
-        |                                     |
-        v                                     v
+                         ┌─────────────────────┐
+                         │   Control Node      │
+                         │      Ansible        │
+                         └──────────┬──────────┘
+                                    │
+                              SSH (22)
+                                    │
+              ┌─────────────────────┴─────────────────────┐
+              │                                           │
+              ▼                                           ▼
 
-+-------------------+             +-------------------+
-|    Web Server     |             |  Database Server  |
-| Ubuntu 22.04 LTS  |             |  Ubuntu 22.04 LTS |
-| Nginx             |             |  MySQL            |
-| UFW Firewall      |             |  UFW Firewall     |
-| 192.168.253.130   |             |  192.168.253.xxx  |
-+-------------------+             +-------------------+
+     ┌──────────────────┐                    ┌──────────────────┐
+     │    Web Server    │                    │ Database Server  │
+     │ Ubuntu 22.04 LTS │                    │ Ubuntu 22.04 LTS │
+     │ Nginx            │                    │ MySQL            │
+     │ UFW Firewall     │                    │ UFW Firewall     │
+     │ 192.168.253.130  │                    │ 192.168.253.xxx  │
+     └────────┬─────────┘                    └────────┬─────────┘
+              │                                       ▲
+              │ MySQL (3306)                          │
+              └──────────── Allowed Only ─────────────┘
 
-              HTTP/HTTPS
-                  |
-                  v
+                       HTTP/HTTPS (80,443)
+                               │
+                               ▼
+                           End Users
 
-              End Users
 ```
 
 ---
@@ -312,14 +331,27 @@ Include screenshots for:
 <img width="568" height="122" alt="image" src="https://github.com/user-attachments/assets/f3766f23-78dc-46d1-a8c6-16e21426de1b" />
 
 8. Blocked MySQL connectivity test from Host Machine.
-<img width="465" height="183" alt="Screenshot_211" src="https://github.com/user-attachments/assets/dffd9a9e-1c7a-450a-af0c-9510658612bb" />
+<img width="568" height="122" alt="image" src="https://github.com/user-attachments/assets/90a9c601-cc30-4398-9210-5bea2fffec18" />
 
+
+## 📸 Screenshots
+
+| Description                  | Screenshot                   |
+| ---------------------------- | ---------------------------- |
+| Ansible Playbook Execution   | <img width="478" height="125" alt="Screenshot_212" src="https://github.com/user-attachments/assets/b7249ff2-7ef4-4602-a9af-c55a6cafd155" /> |
+| Custom Nginx Landing Page    | <img width="944" height="522" alt="image" src="https://github.com/user-attachments/assets/c02a2b63-a649-4786-87c7-b657ddb72893" /> |
+| Nginx Service Status         | <img src="URL3" width="700"> |
+| MySQL Service Status         | <img src="URL4" width="700"> |
+| UFW Status (Web Server)      | <img src="URL5" width="700"> |
+| UFW Status (Database Server) | <img src="URL6" width="700"> |
+| MySQL Allowed Connection     | <img src="URL7" width="700"> |
+| MySQL Blocked Connection     | <img src="URL8" width="700"> |
 
 ---
 
 ## 🎯 Key Achievements
 
-* Provisioned and configured multiple Ubuntu servers from a single Ansible Control Node.
+* Provisioned and configured 2 Ubuntu servers from a single Ansible Control Node.
 * Automated installation and configuration of Nginx and MySQL.
 * Eliminated repetitive manual server setup processes.
 * Implemented firewall-based database isolation.
@@ -357,7 +389,7 @@ Through this project, I learned how to:
 
 ---
 
-## 🚀 Future Improvements
+## 🗺️ Roadmap
 
 Potential future enhancements include:
 
