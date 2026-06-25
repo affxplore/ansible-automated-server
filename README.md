@@ -161,9 +161,9 @@ The default Nginx welcome page is replaced with a custom landing page to minimiz
 Clone the repository:
 
 ```bash
-git clone https://github.com/<your-username>/automated-server-provisioning.git
+git clone https://github.com/affxplore/ansible-automated-server.git
 
-cd automated-server-provisioning
+cd ansible-automated-server
 ```
 
 Verify inventory configuration:
