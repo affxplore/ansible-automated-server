@@ -96,22 +96,30 @@ A multi-tier architecture is implemented by separating the Web Server and Databa
 
 ```text
 .
+├── screenshots/
+│   └── project screenshots
 ├── inventory.ini
 ├── playbook.yml
 ├── server1.html
+├── ansible.cfg
+├── .gitignore
 └── README.md
 ```
 
 ### File Description
 
-| File          | Description                           |
-| ------------- | ------------------------------------- |
-| inventory.ini | Defines managed hosts and groups      |
-| playbook.yml  | Main automation playbook              |
-| server1.html  | Custom landing page deployed to Nginx |
-| README.md     | Project documentation                 |
+| File / Directory | Description                                                        |
+| ---------------- | ------------------------------------------------------------------ |
+| screenshots/     | Contains project evidence and verification screenshots             |
+| inventory.ini    | Defines managed hosts and groups                                   |
+| playbook.yml     | Main Ansible automation playbook                                   |
+| server1.html     | Custom landing page deployed to Nginx                              |
+| ansible.cfg      | Ansible configuration settings                                     |
+| .gitignore       | Excludes unnecessary files and sensitive data from version control |
+| README.md        | Project documentation                                              |
 
----
+```
+```
 
 ## ⚙️ Automated Tasks
 
