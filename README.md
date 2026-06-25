@@ -19,7 +19,7 @@ A multi-tier architecture is implemented by separating the Web Server and Databa
 ---
 
 ## 🖥️ Lab Environment
-<img width="1183" height="548" alt="image" src="https://github.com/user-attachments/assets/fa1f44a0-dc7d-4f0f-b67c-1e0bd46dba6e" />
+<img src="screenshots/lab-environment.png" width="900">
 
 ---
 
@@ -321,14 +321,14 @@ This confirms that the database is protected from unauthorized external access.
 
 | Description                                        | Evidence                                                                                                |
 | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| Successful Ansible Playbook Execution              | <img src="https://github.com/user-attachments/assets/b7249ff2-7ef4-4602-a9af-c55a6cafd155" width="700"> |
-| Custom Nginx Landing Page                          | <img src="https://github.com/user-attachments/assets/c02a2b63-a649-4786-87c7-b657ddb72893" width="700"> |
-| Nginx Service Status                               | <img src="https://github.com/user-attachments/assets/4e8022af-e54d-4bf8-9171-0183d19d7e18" width="700"> |
-| MySQL Service Status                               | <img src="https://github.com/user-attachments/assets/62f30e37-5a59-404d-9cdd-dfdf76f62cff" width="700"> |
-| UFW Status on Web Server                           | <img src="https://github.com/user-attachments/assets/6825c2cf-68df-4ebf-98a8-46e0c4e7177f" width="700"> |
-| UFW Status on Database Server                      | <img src="https://github.com/user-attachments/assets/81b898ed-e770-460a-8dcb-726a651c10a7" width="700"> |
-| Successful MySQL Connectivity Test from Web Server | <img src="https://github.com/user-attachments/assets/f3766f23-78dc-46d1-a8c6-16e21426de1b" width="700"> |
-| Blocked MySQL Connectivity Test from Host Machine  | <img src="https://github.com/user-attachments/assets/90a9c601-cc30-4398-9210-5bea2fffec18" width="700"> |
+| Successful Ansible Playbook Execution              | <img src="screenshots/playbook-execution.png" width="500">  |
+| Custom Nginx Landing Page                          | <img src="screenshots/nginx-landing-page.png" width="500">  |
+| Nginx Service Status                               | <img src="screenshots/nginx-status.png" width="500">        |
+| MySQL Service Status                               | <img src="screenshots/mysql-status.png" width="500">        |
+| UFW Status on Web Server                           | <img src="screenshots/ufw-web-server.png" width="500">      |
+| UFW Status on Database Server                      | <img src="screenshots/ufw-database-server.png" width="500"> |
+| Successful MySQL Connectivity Test from Web Server | <img src="screenshots/mysql-allowed.png" width="500">       |
+| Blocked MySQL Connectivity Test from Host Machine  | <img src="screenshots/mysql-blocked.png" width="500">       |
 
 ---
 
