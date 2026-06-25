@@ -121,7 +121,6 @@ A multi-tier architecture is implemented by separating the Web Server and Databa
 | .gitignore       | Excludes unnecessary files and sensitive data from version control |
 | README.md        | Project documentation                                              |
 
-```
 
 ## ⚙️ Automated Tasks
 
@@ -330,14 +329,14 @@ This confirms that the database is protected from unauthorized external access.
 
 | Description                                        | Evidence                                                                                                |
 | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| Successful Ansible Playbook Execution              | <img src="screenshots/playbook-execution.png" width="500">  |
-| Custom Nginx Landing Page                          | <img src="screenshots/nginx-landing-page.png" width="500">  |
-| Nginx Service Status                               | <img src="screenshots/nginx-status.png" width="500">        |
-| MySQL Service Status                               | <img src="screenshots/mysql-status.png" width="500">        |
-| UFW Status on Web Server                           | <img src="screenshots/ufw-web-server.png" width="500">      |
-| UFW Status on Database Server                      | <img src="screenshots/ufw-database-server.png" width="500"> |
-| Successful MySQL Connectivity Test from Web Server | <img src="screenshots/mysql-allowed.png" width="500">       |
-| Blocked MySQL Connectivity Test from Host Machine  | <img src="screenshots/mysql-blocked.png" width="500">       |
+| Successful Ansible Playbook Execution              | <img src="screenshots/playbook-execution.png" width="450">  |
+| Custom Nginx Landing Page                          | <img src="screenshots/nginx-landing-page.png" width="450">  |
+| Nginx Service Status                               | <img src="screenshots/nginx-status.png" width="450">        |
+| MySQL Service Status                               | <img src="screenshots/mysql-status.png" width="450">        |
+| UFW Status on Web Server                           | <img src="screenshots/ufw-web-server.png" width="450">      |
+| UFW Status on Database Server                      | <img src="screenshots/ufw-database-server.png" width="450"> |
+| Successful MySQL Connectivity Test from Web Server | <img src="screenshots/mysql-allowed.png" width="450">       |
+| Blocked MySQL Connectivity Test from Host Machine  | <img src="screenshots/mysql-blocked.png" width="450">       |
 
 ---
 
