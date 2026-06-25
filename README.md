@@ -28,7 +28,7 @@ A multi-tier architecture is implemented by separating the Web Server and Databa
 
 ## ⭐ Project Highlights
 
-- Provisioned 2 Ubuntu servers from a centralized Ansible Control Node.
+- Provisioned a 3-node environment consisting of 1 Ansible Control Node and 2 managed Ubuntu servers.
 - Automated Nginx and MySQL deployment using a single playbook.
 - Implemented firewall-based database isolation with UFW.
 - Applied Infrastructure as Code (IaC) principles for repeatable deployments.
@@ -121,6 +121,7 @@ A multi-tier architecture is implemented by separating the Web Server and Databa
 | .gitignore       | Excludes unnecessary files and sensitive data from version control |
 | README.md        | Project documentation                                              |
 
+---
 
 ## ⚙️ Automated Tasks
 
@@ -352,6 +353,8 @@ This confirms that the database is protected from unauthorized external access.
 
 ## 💼 Skills Demonstrated
 
+...
+
 * Infrastructure as Code (IaC)
 * Configuration Management
 * Linux System Administration
@@ -376,6 +379,8 @@ Through this project, I learned how to:
 * Apply Infrastructure as Code principles to improve consistency and repeatability.
 * Implement network-level security controls using firewall rules.
 * Design a simple but secure multi-tier architecture.
+
+...
 
 ---
 
