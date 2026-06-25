@@ -297,11 +297,17 @@ Include screenshots for:
 <img width="459" height="467" alt="Screenshot_209" src="https://github.com/user-attachments/assets/149ba155-162c-4d11-af84-3f981355dddb" />
 
 3. Nginx service status.
-<img width="474" height="191" alt="Screenshot_207" src="https://github.com/user-attachments/assets/6932668b-ca5c-47db-8ef5-b9fa8f4a7e9c" />
+<img width="1003" height="375" alt="image" src="https://github.com/user-attachments/assets/7abc34b3-4267-468d-92cd-bb921687e087" />
 
 4. MySQL service status.
+<img width="865" height="337" alt="image" src="https://github.com/user-attachments/assets/d244ef5c-05eb-4aff-9fd6-f814ff798ba8" />
+
 5. UFW status on Web Server.
+<img width="317" height="140" alt="Screenshot_208" src="https://github.com/user-attachments/assets/f462c03d-8aa5-4ab6-a354-2621e545ce6a" />
+
 6. UFW status on Database Server.
+<img width="510" height="234" alt="image" src="https://github.com/user-attachments/assets/81b898ed-e770-460a-8dcb-726a651c10a7" />
+
 7. Successful MySQL connectivity test from Web Server.
 <img width="316" height="50" alt="Screenshot_210" src="https://github.com/user-attachments/assets/2a7073fd-cc84-4a34-a534-e3c711881c52" />
 
