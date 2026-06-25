@@ -294,13 +294,13 @@ Include screenshots for:
 <img width="478" height="125" alt="Screenshot_212" src="https://github.com/user-attachments/assets/b7249ff2-7ef4-4602-a9af-c55a6cafd155" />
 
 2. Custom Nginx landing page.
-<img width="459" height="467" alt="Screenshot_209" src="https://github.com/user-attachments/assets/149ba155-162c-4d11-af84-3f981355dddb" />
+<img width="944" height="522" alt="image" src="https://github.com/user-attachments/assets/c02a2b63-a649-4786-87c7-b657ddb72893" />
 
 3. Nginx service status.
-<img width="1003" height="375" alt="image" src="https://github.com/user-attachments/assets/7abc34b3-4267-468d-92cd-bb921687e087" />
+<img width="989" height="372" alt="image" src="https://github.com/user-attachments/assets/4e8022af-e54d-4bf8-9171-0183d19d7e18" />
 
 4. MySQL service status.
-<img width="865" height="337" alt="image" src="https://github.com/user-attachments/assets/d244ef5c-05eb-4aff-9fd6-f814ff798ba8" />
+<img width="452" height="272" alt="image" src="https://github.com/user-attachments/assets/05c40e9d-1b38-4980-87e7-a7620ee684a3" />
 
 5. UFW status on Web Server.
 <img width="317" height="140" alt="Screenshot_208" src="https://github.com/user-attachments/assets/f462c03d-8aa5-4ab6-a354-2621e545ce6a" />
