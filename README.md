@@ -300,16 +300,16 @@ Include screenshots for:
 <img width="989" height="372" alt="image" src="https://github.com/user-attachments/assets/4e8022af-e54d-4bf8-9171-0183d19d7e18" />
 
 4. MySQL service status.
-<img width="452" height="272" alt="image" src="https://github.com/user-attachments/assets/05c40e9d-1b38-4980-87e7-a7620ee684a3" />
+<img width="836" height="339" alt="image" src="https://github.com/user-attachments/assets/62f30e37-5a59-404d-9cdd-dfdf76f62cff" />
 
 5. UFW status on Web Server.
-<img width="317" height="140" alt="Screenshot_208" src="https://github.com/user-attachments/assets/f462c03d-8aa5-4ab6-a354-2621e545ce6a" />
+<img width="510" height="234" alt="image" src="https://github.com/user-attachments/assets/6825c2cf-68df-4ebf-98a8-46e0c4e7177f" />
 
 6. UFW status on Database Server.
 <img width="510" height="234" alt="image" src="https://github.com/user-attachments/assets/81b898ed-e770-460a-8dcb-726a651c10a7" />
 
 7. Successful MySQL connectivity test from Web Server.
-<img width="316" height="50" alt="Screenshot_210" src="https://github.com/user-attachments/assets/2a7073fd-cc84-4a34-a534-e3c711881c52" />
+<img width="568" height="122" alt="image" src="https://github.com/user-attachments/assets/f3766f23-78dc-46d1-a8c6-16e21426de1b" />
 
 8. Blocked MySQL connectivity test from Host Machine.
 <img width="465" height="183" alt="Screenshot_211" src="https://github.com/user-attachments/assets/dffd9a9e-1c7a-450a-af0c-9510658612bb" />
