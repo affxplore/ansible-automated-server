@@ -48,36 +48,7 @@ A multi-tier architecture is implemented by separating the Web Server and Databa
 ---
 
 ## 🏗️ Infrastructure Architecture
-
-```text
-                         ┌─────────────────────┐
-                         │   Control Node      │
-                         │      Ansible        │
-                         └──────────┬──────────┘
-                                    │
-                              SSH (22)
-                                    │
-              ┌─────────────────────┴─────────────────────┐
-              │                                           │
-              ▼                                           ▼
-
-     ┌──────────────────┐                    ┌──────────────────┐
-     │    Web Server    │                    │ Database Server  │
-     │ Ubuntu 26.04 LTS │                    │ Ubuntu 26.04 LTS │
-     │ Nginx            │                    │ MySQL            │
-     │ UFW Firewall     │                    │ UFW Firewall     │
-     │ 192.168.253.130  │                    │ 192.168.253.131  │
-     └────────┬─────────┘                    └────────┬─────────┘
-              │                                       ▲
-              │ MySQL (3306)                          │
-              └──────────── Allowed Only ─────────────┘
-
-                       HTTP/HTTPS (80,443)
-                               │
-                               ▼
-                           End Users
-
-```
+<img width="2946" height="4661" alt="Tambahkan subjudul (Infografis) (2)" src="https://github.com/user-attachments/assets/578fa29b-47b6-4e95-a093-f1cd25b9a325" />
 
 ---
 
