@@ -48,8 +48,7 @@ A multi-tier architecture is implemented by separating the Web Server and Databa
 ---
 
 ## 🏗️ Infrastructure Architecture
-<img width="370" height="554" alt="image" src="https://github.com/user-attachments/assets/bfdf1427-5b03-49db-b94e-c442c7ea08c7" />
-
+<img width="2946" height="4661" alt="Tambahkan subjudul (Infografis) (2)" src="https://github.com/user-attachments/assets/02eb8cf8-117e-4765-8693-6e0eda1b9f8f" />
 
 ---
 
